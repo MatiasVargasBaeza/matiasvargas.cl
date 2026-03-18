@@ -1,0 +1,112 @@
+/* Altura del navbar: se usa en body y en el hero para que nada quede tapado */
+:root {
+  --navbar-height: 64px;
+}
+
+body {
+  margin: 0;
+  padding-top: var(--navbar-height);
+  scroll-behavior: smooth;
+}
+
+/* Franja oscura bajo el navbar para que no se vea línea blanca (el resto del body queda claro) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  background-color: #212529;
+  z-index: 0;
+}
+
+.navbar-brand span {
+  font-weight: 600;
+}
+
+header,
+.content-with-navbar {
+  margin-top: 0;
+}
+
+/* Hero: contenido alineado arriba; espacio abajo para que nada se recorte */
+.hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.3)
+  );
+  align-items: flex-start !important;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  box-sizing: border-box;
+}
+
+.hero-overlay .container {
+  padding-top: 0;
+}
+
+/* Diapositivas 2 y 3: texto centrado un poco más abajo */
+.hero-overlay--centered {
+  align-items: center !important;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hero-overlay--centered .container {
+  padding-top: 8vh;
+}
+
+/* Recuadro de la foto de perfil: altura limitada y margen abajo para que no lo corte el carrusel */
+.hero-profile-card {
+  max-height: min(440px, calc(88vh - 9rem));
+  margin-bottom: 0;
+  flex-shrink: 0;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.4);
+}
+
+.hero-profile-img {
+  max-height: 280px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Slides del carrusel: altura y recorte centrado (arriba y abajo igual) */
+.hero-slide {
+  height: 88vh;
+  min-height: 520px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+}
+
+.skill-badge {
+  font-size: 0.9rem;
+  margin: 0.25rem;
+}
+
+.hobbie-bg {
+  background: radial-gradient(circle at top left, #343a40 0, #000 60%);
+}
+
+footer a {
+  text-decoration: none;
+}
