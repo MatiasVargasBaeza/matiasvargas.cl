@@ -1,6 +1,19 @@
-/* Altura del navbar: se usa en body y en el hero para que nada quede tapado */
+/* Altura del navbar: se usa en body y en el hero para que nada quede tapado.
+   En pantallas angostas la marca suele ocupar dos líneas y supera 64px. */
 :root {
   --navbar-height: 64px;
+}
+
+@media (max-width: 991.98px) {
+  :root {
+    --navbar-height: 118px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --navbar-height: 132px;
+  }
 }
 
 body {
@@ -43,6 +56,12 @@ header,
   box-sizing: border-box;
 }
 
+@media (max-width: 991.98px) {
+  .hero-overlay:not(.hero-overlay--centered) {
+    padding-top: 0.75rem;
+  }
+}
+
 .hero-overlay .container {
   padding-top: 0;
 }
@@ -73,6 +92,23 @@ header,
   display: block;
 }
 
+@media (max-width: 991.98px) {
+  .hero-profile-card {
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: none;
+  }
+
+  .hero-profile-img {
+    max-height: 200px;
+    width: 200px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* Slides del carrusel: altura y recorte centrado (arriba y abajo igual) */
 .hero-slide {
   height: 88vh;
@@ -80,6 +116,34 @@ header,
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 991.98px) {
+  /*
+   * Slide 1: el overlay absoluto + h-100 fija la altura al viewport y el texto
+   * largo queda fuera; el .carousel-inner recorta con overflow hidden.
+   * En flujo normal el slide crece con foto + titulares + párrafo.
+   */
+  .hero-slide:has(.hero-overlay:not(.hero-overlay--centered)) {
+    height: auto;
+    min-height: 55vh;
+  }
+
+  .hero-slide .hero-overlay:not(.hero-overlay--centered) {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 55vh;
+    padding-bottom: 4rem;
+  }
+
+  /* Slides 2 y 3: siguen a pantalla completa con overlay absoluto */
+  .hero-slide:has(.hero-overlay--centered) {
+    height: auto;
+    min-height: min(88vh, 900px);
+  }
 }
 
 .section-title {

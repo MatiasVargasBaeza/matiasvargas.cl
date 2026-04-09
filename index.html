@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portafolio - Matías Ignacio Vargas Baeza</title>
+  <title>Matías Ignacio Vargas Baeza</title>
 
   <!-- Bootstrap CSS -->
   <link
@@ -79,32 +79,17 @@
           >
             <div class="hero-overlay w-100 h-100 position-absolute top-0 start-0 d-flex align-items-center">
               <div class="container text-white">
-                <div class="row">
-                  <div class="col-lg-7">
-                    <p class="text-uppercase text-warning mb-2">
-                      <i class="bi bi-rocket-takeoff-fill me-1"></i> Portafolio Personal
-                    </p>
+                <div class="row align-items-center gy-4">
+                  <div class="col-lg-7 order-2 order-lg-1">
                     <h1 class="display-4 fw-bold mb-3">
                       Matías Ignacio Vargas Baeza
                     </h1>
-                    <h2 class="h4 fw-semibold mb-3">
+                    <h2 class="h4 fw-semibold mb-0">
                       Estudiante de Analista Programador
                     </h2>
-                    <p class="lead mb-4">
-                      Actualmente buscando realizar mi práctica profesional y
-                      seguir creciendo en el mundo del desarrollo de software.
-                    </p>
-                    <a href="experiencia.html" class="btn btn-warning btn-lg me-3">
-                      <i class="bi bi-briefcase-fill me-2"></i>
-                      Ver mi experiencia
-                    </a>
-                    <a href="habilidades.html" class="btn btn-outline-light btn-lg">
-                      <i class="bi bi-lightning-charge-fill me-2"></i>
-                      Ver habilidades
-                    </a>
                   </div>
-                  <div class="col-lg-5 d-none d-lg-flex align-items-center justify-content-center align-items-lg-start pt-lg-2">
-                    <div class="hero-profile-card bg-dark bg-opacity-50 rounded-4 p-4">
+                  <div class="col-lg-5 order-1 order-lg-2 d-flex align-items-center justify-content-center">
+                    <div class="hero-profile-card bg-dark bg-opacity-50 rounded-4 p-4 text-center text-lg-start">
                       <img
                         src="fotoperfil.png"
                         class="hero-profile-img rounded-3 mb-3"
@@ -200,9 +185,71 @@
     </div>
   </header>
 
-  <!-- Solo hero/carousel en la página de inicio.
-       El contenido de las secciones vive ahora en archivos separados:
-       sobre-mi.html, habilidades.html, experiencia.html y hobbie.html -->
+  <main class="py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-8 text-center mb-4 mb-lg-5">
+          <h2 class="h3 fw-bold text-dark mb-3">Bienvenido a mi portafolio</h2>
+          <p class="text-muted lead fs-6 mb-0">
+            Soy estudiante de Analista Programador en Chile, con interés en
+            construir software claro, útil y bien mantenible. Me motiva aprender
+            herramientas nuevas, trabajar en equipo y dejar proyectos
+            documentados para que otros puedan entenderlos y retomarlos. En este
+            sitio encontrarás un resumen de lo que he hecho y las competencias
+            que estoy fortaleciendo día a día.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-5">
+          <div class="card home-feature-card h-100 shadow-sm border-0 position-relative">
+            <div class="card-body d-flex flex-column p-4">
+              <div class="d-flex align-items-center mb-3">
+                <span class="icon-circle bg-warning text-dark me-3 flex-shrink-0">
+                  <i class="bi bi-briefcase-fill"></i>
+                </span>
+                <h3 class="h5 fw-bold mb-0">Experiencia</h3>
+              </div>
+              <ul class="small text-muted ps-3 mb-4 flex-grow-1">
+                <li class="mb-2">Proyectos académicos y prácticas relacionadas con desarrollo.</li>
+                <li class="mb-2">Enfoque en aprendizaje aplicado y buenas prácticas.</li>
+                <li>Detalles y trayectoria en la página dedicada.</li>
+              </ul>
+              <a href="experiencia.html" class="btn btn-warning fw-semibold stretched-link">
+                <i class="bi bi-arrow-right-circle me-2"></i>Ver mi experiencia
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-5">
+          <div class="card home-feature-card h-100 shadow-sm border-0 position-relative">
+            <div class="card-body d-flex flex-column p-4">
+              <div class="d-flex align-items-center mb-3">
+                <span class="icon-circle bg-dark text-warning me-3 flex-shrink-0">
+                  <i class="bi bi-lightning-charge-fill"></i>
+                </span>
+                <h3 class="h5 fw-bold mb-0">Habilidades</h3>
+              </div>
+              <ul class="small text-muted ps-3 mb-4 flex-grow-1">
+                <li class="mb-2">Lenguajes, herramientas y metodologías que manejo.</li>
+                <li class="mb-2">Tecnologías que estoy profundizando.</li>
+                <li>Lista detallada en la sección de habilidades.</li>
+              </ul>
+              <a href="habilidades.html" class="btn btn-outline-dark fw-semibold stretched-link">
+                <i class="bi bi-arrow-right-circle me-2"></i>Ver habilidades
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center text-muted small mt-4 mb-0">
+        ¿Quieres saber más sobre mí?
+        <a href="sobre-mi.html" class="text-decoration-none fw-semibold">Ir a Sobre mí</a>
+      </p>
+    </div>
+  </main>
 
   <!-- Footer -->
   <footer class="bg-dark text-light py-4">
